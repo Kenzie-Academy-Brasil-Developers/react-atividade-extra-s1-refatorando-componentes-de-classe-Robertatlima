@@ -6,7 +6,7 @@ import SearchWeather from "./components/SearchWeather";
 import "./App.css";
 
 function App() {
-  const [weather, SetWeather] = useState("");
+  const [weather, SetWeather] = useState([]);
   const [city, setCity] = useState("");
 
   const handleChangeWeather = (weatherData, city) => {

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./style.css";
 
 function SearchWeather({ handleChangeWeather }) {
-  const [inputValue, setInputValue] = useState("Curitiba");
+  const [inputValue, setInputValue] = useState("Recife");
 
   const handleSubmit = () => {
     fetch(`https://goweather.herokuapp.com/weather/${inputValue}`)
@@ -12,6 +12,7 @@ function SearchWeather({ handleChangeWeather }) {
   };
   useEffect(() => {
     handleSubmit();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
